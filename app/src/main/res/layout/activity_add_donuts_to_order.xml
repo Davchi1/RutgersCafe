@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3779FF40"
+    tools:context=".addDonutsToOrderActivity">
+
+    <Spinner
+        android:id="@+id/donutQuantitySpinner"
+        android:layout_width="146dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/subTotalDisplayTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toEndOf="@+id/selectedDonutTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:id="@+id/selectedDonutTextView"
+        android:layout_width="146dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/Donut_Flavor_To_Be_Filled"
+        android:textAlignment="gravity"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/donutSubTotalTextView"
+        app:layout_constraintEnd_toStartOf="@+id/donutQuantitySpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addDonutToOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="196dp"
+        android:onClick="onClick"
+        android:text="@string/Add_To_Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTotalDisplayTextView" />
+
+    <TextView
+            android:id="@+id/subTotalDisplayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="88dp"
+            android:layout_marginBottom="308dp"
+            android:background="#FFFFFF"
+            android:text="@string/baseAmount"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/donutSubTotalTextView"
+            app:layout_constraintTop_toBottomOf="@+id/donutQuantitySpinner"/>
+
+    <TextView
+        android:id="@+id/donutSubTotalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="308dp"
+        android:text="@string/SubTotal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/subTotalDisplayTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedDonutTextView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="204dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="53dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/donutQuantitySpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/flatten" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
